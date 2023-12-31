@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 2px black;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  h1{
+    color: #000000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .boxes {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: none;
+    background-color: rgb(227, 227, 227);
+  }
+  
+  .editor-container {
+    display: inline-flex;
+    margin: 5px;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .editor-container .CodeMirror {
+    flex-grow: 1;
+  }
+  
+  .editor-header {
+    padding:0 20px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .button-container {
+    border-bottom: 1px solid;
+    padding: 10px;
+    display: flex;
+    background-color:rgb(255, 255, 255);
+  }
+
+  .button-container>button {
+    margin-right: 10px;
+    background-color: #024b1c; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+  }
+  .button-container>button:hover {
+    background-color: rgb(75, 150, 1);
+  }
+  
+  @media screen and (max-width: 900px) {
+    .boxes {
+      flex-direction: column;
+    }
+  
+    .cm-s-monokai.CodeMirror {
+      max-height: 200px;
+    }
+}
